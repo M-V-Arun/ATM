@@ -1,0 +1,97 @@
+package project;
+
+import java.util.Scanner;
+
+public class calculator {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner (System.in);
+	    
+		String str="yes";
+		System.out.println("seslect number 1");
+		double num1=sc.nextDouble();
+		while(str.equalsIgnoreCase("yes")){	
+			System.out.println("select 1 for add");
+			System.out.println("select 2 for subtract");
+			System.out.println("select 3 for multiply");
+			System.out.println("select 4 for divide");
+			System.out.println("select 5 for modulus the number");
+			System.out.println("select 6 for square the number");
+			System.out.println("select 7 for -/+ the number");
+			
+	       int result = sc.nextInt();
+	
+	switch(result) {
+	case 1:
+		/*System.out.println("enter the first number");
+		
+		double num1=sc.nextDouble();*/
+		System.out.println("enter the second number");
+		double num2=sc.nextDouble();
+		num1+=num2;
+		System.out.println(num1);
+		break;
+	case 2:
+		//System.out.println("enter the first number");
+		
+		//double num3=sc.nextDouble();
+		System.out.println("enter the second number");
+		double num4=sc.nextDouble();
+		num1-=num4;
+		System.out.println(num1);
+		break;
+	case 3:
+		//System.out.println("enter the first number");
+		
+		//double num5=sc.nextDouble();
+		System.out.println("enter the second number");
+		double num6=sc.nextDouble();
+		num1*=num6;
+		System.out.println(num1);
+		break;
+	case 4:
+		//System.out.println("enter the first number");
+		
+		//double num7=sc.nextDouble();
+		System.out.println("enter the second number");
+		double num8=sc.nextDouble();
+		num1/=num8;
+		System.out.println(num1);
+		break;
+	case 5:
+		System.out.println("enter the first number");
+		
+		//double num9=sc.nextDouble();
+	//	System.out.println("enter the second number");
+		double num10=sc.nextDouble();
+		num1%=num10;
+		System.out.println(num1);
+		break;
+	case 6:
+		System.out.println("enter the number");
+		
+		double num11=sc.nextDouble();
+		num1*=num11;
+		
+		System.out.println(num1);
+		break;
+	
+	case 7:
+		System.out.println("enter the first number");
+		
+		double num13=sc.nextDouble();
+		num1= -num13;
+		
+		System.out.println(num1);
+		break;
+		default:
+			System.out.println("enter a valid number");
+			
+	}
+	System.out.println("Do you want to continue(yes/no):");
+	str=sc.next();
+	}
+
+
+	}
+
+}
