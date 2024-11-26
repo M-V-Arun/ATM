@@ -1,0 +1,70 @@
+package project;
+import java.util.*;
+public class ATM {
+	
+
+	public static void main(String[] args) {
+		int balance=5000,withdraw,deposit;
+		int pin=2345;
+		Scanner soc =new Scanner(System.in);
+		System.out.println("AUTOMATED TELLER MACHINE");
+		System.out.println("");
+		System.out.println("please enter your pin");
+		System.out.println("");
+		int password = soc.nextInt();
+		if(password==pin) {
+			System.out.println("");
+		}
+		else {
+			System.out.println("Enter the valid pin");
+			System.out.println("");
+			System.out.println("last transaction cancelled Automatically");
+			System.exit(0);
+		}
+		while(true) {
+			
+		 	
+            System.out.println("Choose 1 for WITHDRAW");
+            System.out.println("Coose 2 for DEPOSIT");
+            System.out.println("Choose 3 for check current BALANCE");
+            System.out.println("Coose 4 for EXIT");
+           // System.out.println("Choose a operator u want to perform");
+            
+            
+            int n=soc.nextInt();
+       
+             switch(n) {
+            case 1:
+            System.out.println("enter amount");
+            	withdraw = soc.nextInt();
+            	if(balance>=withdraw) {
+            		balance = balance-withdraw;
+            		System.out.println("please collect your money");
+            	}
+            	else {
+            		System.out.println("Insufficient balance");
+            	}
+            	System.out.println("");
+            	break;
+            case 2:
+            	System.out.println("Enter money to be deposit");
+            	deposit=soc.nextInt();
+            	balance=balance+deposit;
+            	System.out.println("your money has been succefully deposited");
+            	System.out.println("");
+            	break;
+            case 3:
+            	System.out.println("Check your balance "+balance);
+            	System.out.println("");
+            	break;
+            case 4:
+            	System.out.println("thank you for receiveing");
+            	System.exit(0);
+            	
+            }
+            
+		}
+	}
+
+	
+}
